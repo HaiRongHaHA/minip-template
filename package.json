@@ -32,11 +32,10 @@
         "less-loader": "^5.0.0",
         "webpack": "^4.42.0",
         "webpack-cli": "^3.3.11",
-        "wxml-loader": "^0.3.0"
-    },
-    "dependencies": {
+        "wxml-loader": "^0.3.0",
         "ensure-posix-path": "^1.1.1",
         "replace-ext": "^1.0.0",
         "required-path": "^1.0.1"
-    }
+    },
+    "dependencies": {}
 }
