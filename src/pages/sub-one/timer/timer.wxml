@@ -1,0 +1,8 @@
+<text>\n</text>
+<view class="tc fs30">{{getSecond}}s</view>
+<button bind:tap="openCountDown">点击开启60s倒计时</button>
+<view class="list tc">
+    <view wx:for="{{countDownUI}}" wx:key="key">
+        <text wx:if="{{item}}">{{item}}</text>
+    </view>
+</view>

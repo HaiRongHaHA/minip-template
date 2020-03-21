@@ -1,6 +1,0 @@
-<wxs src="@/common/filters/dateFilter.wxs" module="dateFilter" />
-<view class="container log-list">
-    <block wx:for="{{logs}}" wx:for-item="log" wx:key="key">
-        <text class="log-item">{{dateFilter(now)}}</text>
-    </block>
-</view>

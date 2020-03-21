@@ -1,0 +1,22 @@
+/**
+ * @name formatPrice 金额千分符格式化
+ * @price {number|string} 需要格式化的金额
+ * @returns {string} 格式化后的千分符金额
+ */
+var formatPrice = function(price) {
+    var str = typeof price !== "string" ? price.toString() : price;
+    var dot = getRegExp("\.\d{0,2}");
+    var reg = getRegExp("\d{1,3}(?=(\d{3})+$)", "g");
+    var dotStr = null; 
+    var dotIndex = null;
+    str.replace(dot,function(val,index){
+        dotStr = val.length > 2 ? val : val.replace('.','.0'); 
+        dotIndex = index;
+    })
+    if (dotIndex) str = str.slice(0, dotIndex);
+    var integer = str.replace(reg, "$&,")
+    var dot = dotStr ? dotStr : ".00"
+    var res = "" + integer + "" + dot + "";
+    return res;
+};
+module.exports = formatPrice;

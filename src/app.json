@@ -9,7 +9,7 @@
     "subPackages": [
         {
             "root": "pages/sub-one",
-            "pages": ["logs/logs"]
+            "pages": ["timer/timer"]
         }
     ],
     "style": "v2",

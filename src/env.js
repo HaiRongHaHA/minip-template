@@ -1,41 +1,37 @@
+/*
+ 环境变量，发布测试或者生产切换这个注释
+*/
+const WECHART_ENV = "test";
+// const WECHART_ENV = 'qa';
+// const WECHART_ENV = 'development';
+// const WECHART_ENV = 'production';
 let URL = {
-    envName: process.env.NODE_ENV,
+    envName: WECHART_ENV,
     picURL: "",
     baseURL: "",
     appId: ""
 };
-console.log(process.env);
-switch (process.env.NODE_ENV) {
+switch (WECHART_ENV) {
     case "development":
-        URL.picURL = "https://zht-dev-nosec.oss-cn-beijing.aliyuncs.com/";
-        // URL.picURL = 'https://zht-test-nosec.oss-cn-beijing.aliyuncs.com/'
-        URL.baseURL = "https://custom.dev.ccbuluo.cn/agora";
-        URL.loginURL = "https://custom.dev.ccbuluo.cn/member";
-        URL.appId = "wx17f444ee74bc113d";
-        // URL.baseURL = 'https://custom.dev.ccbuluo.cn/agora-baowei' //宝伟
-        // URL.baseURL = 'https://custom.dev.ccbuluo.cn/agora-lizhao'; //照哥
-        // URL.baseURL = 'http://custom.dev.ccbuluo.cn/agora-liuduo'; // 刘铎
-        // URL.baseURL = 'http://custom.dev.ccbuluo.cn/agora-caoshuai'; // 巢帅
+        URL.picURL = "https://dev.com/"; // 仅为示例，并非真实的接口地址
+        URL.baseURL = "https://dev/";
+        URL.loginURL = "https://dev/";
         break;
     case "test":
-        URL.picURL = "https://zht-test-nosec.oss-cn-beijing.aliyuncs.com/";
-        URL.baseURL = "https://custom.test.ccbuluo.cn/agora";
-        // URL.baseURL = 'https://custom.test.ccbuluo.cn/agora-lizhao'; //照哥
-        URL.loginURL = "https://custom.test.ccbuluo.cn/member";
-        URL.appId = "wx17f444ee74bc113d"; //'wx633c3906da63d061';
+        URL.picURL = "https://test/";
+        URL.baseURL = "https://test/";
+        URL.loginURL = "https://test/";
         break;
     case "qa":
-        URL.picURL = "https://zht-qa-nosec.oss-cn-beijing.aliyuncs.com/";
-        URL.baseURL = "https://custom.qa.ccbuluo.cn/agora";
-        URL.loginURL = "https://custom.qa.ccbuluo.cn/member";
-        URL.appId = "wx17f444ee74bc113d"; //'wx633c3906da63d061';
+        URL.picURL = "https://qa.xxx/";
+        URL.baseURL = "https://qa/";
+        URL.loginURL = "https://qa/";
         break;
     case "production":
-        URL.picURL = "https://zht-prod-nosec.oss-cn-beijing.aliyuncs.com/";
-        URL.baseURL = "https://custom.ccbuluo.com/agora";
-        URL.loginURL = "https://custom.ccbuluo.com/member";
-        URL.appId = "wx17f444ee74bc113d";
+        URL.picURL = "https://prod.xxx/";
+        URL.baseURL = "https://prod/";
+        URL.loginURL = "https://prod/";
         break;
 }
 
-export default URL;
+module.exports = URL;
