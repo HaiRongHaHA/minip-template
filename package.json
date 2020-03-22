@@ -2,22 +2,15 @@
     "name": "wep-template",
     "version": "1.0.0",
     "description": "wep-cli脚手架的代码模板",
+    "private": true,
     "main": "index.js",
     "scripts": {
         "dev": "cross-env NODE_ENV=development node build/build.js",
         "build": "cross-env NODE_ENV=production node build/build.js"
     },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/HaiRongHaHA/wep-template.git"
-    },
     "keywords": [],
     "author": "",
     "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/HaiRongHaHA/wep-template/issues"
-    },
-    "homepage": "https://github.com/HaiRongHaHA/wep-template#readme",
     "devDependencies": {
         "@babel/core": "^7.8.7",
         "@babel/plugin-proposal-class-properties": "^7.8.3",
@@ -40,6 +33,5 @@
         "webpack-bundle-analyzer": "^3.6.1",
         "webpack-cli": "^3.3.11",
         "wxml-loader": "^0.3.0"
-    },
-    "dependencies": {}
+    }
 }
