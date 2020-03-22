@@ -1,10 +1,12 @@
 const { resolve } = require("path");
 const plugins = require("./plugins");
 const rules = require("./rules");
-const isRelease = process.env.BUILD_TYPE === "release";
+const isProduction = process.env.NODE_ENV === "production";
 module.exports = {
     context: resolve("src"),
-    mode: isRelease ? "production" : "none",
+    mode: isProduction ? "production" : "none",
+    watch: isProduction ? false : true,
+    // progress
     watchOptions: {
         poll: 1000, // 每秒 问1000次
         aggregateTimeout: 500, // 防抖，输入代码后得500毫秒更新

@@ -6,7 +6,7 @@ App({
         picURL: ENV.picURL, // 图片路径
         baseURL: ENV.baseURL, // 业务接口路径
         loginURL: ENV.loginURL, // 登录接口路径
-        appId: "wx000000000000000", // 仅为示例，并非真实appId
+        appId: "",
         systemConfig: null // 设备信息
     },
     onLaunch() {

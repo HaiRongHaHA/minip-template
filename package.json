@@ -4,8 +4,8 @@
     "description": "wep-cli脚手架的代码模板",
     "main": "index.js",
     "scripts": {
-        "dev": "webpack --watch --progress --config build/webpack.config.js",
-        "build": "cross-env BUILD_TYPE=release webpack --config build/webpack.config.js"
+        "dev": "cross-env NODE_ENV=development node build/build.js",
+        "build": "cross-env NODE_ENV=production node build/build.js"
     },
     "repository": {
         "type": "git",
@@ -23,19 +23,22 @@
         "@babel/plugin-proposal-class-properties": "^7.8.3",
         "@babel/preset-env": "^7.8.7",
         "babel-loader": "^8.0.6",
+        "chalk": "^3.0.0",
         "clean-webpack-plugin": "^3.0.0",
         "copy-webpack-plugin": "^5.1.1",
         "cross-env": "^7.0.2",
         "css-loader": "^3.4.2",
+        "ensure-posix-path": "^1.1.1",
         "file-loader": "^6.0.0",
         "less": "^3.11.1",
         "less-loader": "^5.0.0",
+        "ora": "^4.0.3",
+        "replace-ext": "^1.0.0",
+        "required-path": "^1.0.1",
+        "rimraf": "^3.0.2",
         "webpack": "^4.42.0",
         "webpack-cli": "^3.3.11",
-        "wxml-loader": "^0.3.0",
-        "ensure-posix-path": "^1.1.1",
-        "replace-ext": "^1.0.0",
-        "required-path": "^1.0.1"
+        "wxml-loader": "^0.3.0"
     },
     "dependencies": {}
 }
