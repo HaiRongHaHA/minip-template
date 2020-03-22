@@ -1,7 +1,7 @@
 {
-    "name": "wep-template",
+    "name": "minip-template",
     "version": "1.0.0",
-    "description": "wep-cli脚手架的代码模板",
+    "description": "minip-cli脚手架的代码模板",
     "private": true,
     "main": "index.js",
     "scripts": {
