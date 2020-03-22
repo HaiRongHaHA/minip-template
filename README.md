@@ -27,8 +27,6 @@ npm run build --report
 
 **webpack 可以帮助我们 ES6 转 ES5，压缩和混淆代码，因此这些事情，不需要微信开发者工具帮我们做了。点击微信开发者工具右上角的详情按钮，在项目设置中，反勾选 ES6 转 ES5，上传代码时自动压缩混淆等选项，**
 
-![alt](https://user-gold-cdn.xitu.io/2019/6/12/16b4aa2fff770619?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
-
 > ## 参考文献
 
 [掘金：小程序工程化实践（上篇）-- 手把手教你撸一个小程序 webpack 插件，一个例子带你熟悉 webpack 工作流程](https://juejin.im/post/5d00aa5e5188255a57151c8a#heading-11)
