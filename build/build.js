@@ -11,8 +11,15 @@ spinner.start();
 
 const config = {
     assetsRoot: path.resolve(__dirname, `../dist`),
-    assetsSubDirectory: ""
+    assetsSubDirectory: "",
+    bundleAnalyzerReport: process.env.npm_config_report
 };
+
+if (config.bundleAnalyzerReport) {
+    const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
+        .BundleAnalyzerPlugin;
+    webpackConfig.plugins.push(new BundleAnalyzerPlugin());
+}
 
 rm(path.join(config.assetsRoot, config.assetsSubDirectory), err => {
     if (err) throw err;

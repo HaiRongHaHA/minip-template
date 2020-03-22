@@ -1,4 +1,6 @@
 import Timer from "@/common/Timer";
+import { test } from "@/apis/base.js";
+
 Page({
     data: {
         getSecond: 0,

@@ -1,4 +1,6 @@
 import { test } from "@/apis/base.js";
+import Timer from "@/common/Timer";
+
 Page({
     data: {
         now: new Date().getTime(),

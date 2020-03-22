@@ -37,6 +37,7 @@
         "required-path": "^1.0.1",
         "rimraf": "^3.0.2",
         "webpack": "^4.42.0",
+        "webpack-bundle-analyzer": "^3.6.1",
         "webpack-cli": "^3.3.11",
         "wxml-loader": "^0.3.0"
     },

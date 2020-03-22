@@ -30,9 +30,21 @@ module.exports = {
     optimization: {
         splitChunks: {
             chunks: "all",
-            name: "common",
             minChunks: 2,
-            minSize: 0
+            minSize: 0,
+            name: "common",
+            cacheGroups: {
+                // 缓存组
+                vendors: {
+                    test: /[\\/]node_modules[\\/]/,
+                    priority: -10
+                },
+                default: {
+                    minChunks: 2,
+                    priority: -20,
+                    reuseExistingChunk: true
+                }
+            }
         },
         runtimeChunk: {
             name: "runtime"

@@ -1,6 +1,7 @@
 <wxs src="@/common/filters/dateFilter.wxs" module="dateFilter" />
 <wxs src="@/common/filters/priceFilter.wxs" module="priceFilter" />
 <view class="flex column auto h100p">
+    <image src="/assert/imgs/dog.jpg" />
     <view class="userinfo flex column align_center">
         <button wx:if="{{!userInfo}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
             点击登录
